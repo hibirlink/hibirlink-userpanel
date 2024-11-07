@@ -1,0 +1,5 @@
+mutation($id:Int!){
+  delete_digital_product_by_pk(id:$id){
+    id
+  }
+}

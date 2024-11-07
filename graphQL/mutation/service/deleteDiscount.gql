@@ -1,0 +1,7 @@
+mutation deleteDiscount($id:Int!){
+  
+  deleteDiscount:delete_service_discount_by_pk(id:$id)
+  {
+    id
+  } 
+}

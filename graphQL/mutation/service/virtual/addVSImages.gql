@@ -1,0 +1,8 @@
+mutation addVSImage($objects: [virtual_service_image_insert_input!]!) {
+  response: insert_virtual_service_image(objects: $objects) {
+    returning {
+      id
+      image_url
+    }
+  }
+}

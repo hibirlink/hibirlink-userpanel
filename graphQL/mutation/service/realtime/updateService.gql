@@ -1,0 +1,14 @@
+mutation updateRTS(
+  $object: realtime_service_set_input!
+  $id: bigint!
+  $account: account_set_input!
+  $accountID: Int!
+) {
+  URTS: update_realtime_service_by_pk(_set: $object, pk_columns: { id: $id }) {
+    id
+  }
+
+  URTSA: update_account_by_pk(_set: $account, pk_columns: { id: $accountID }) {
+    id
+  }
+}

@@ -1,0 +1,65 @@
+query fetchRTS($id: String!, $limit: Int, $offset: Int) {
+  USERID: users_by_pk(id: $id) {
+    RTS: realtime_services(limit: $limit, offset: $offset) {
+      id
+      title
+      description
+      licence
+      is_verified
+      category_id
+      logo
+
+      category: realtime_service_category {
+        name
+      }
+
+      rate: realtime_service_rates_aggregate {
+        aggregate {
+          avg {
+            rate
+          }
+        }
+      }
+      contact: realtime_service_addresses {
+        socialMedia
+      }
+    }
+    total: realtime_services_aggregate {
+      count: aggregate {
+        count
+      }
+    }
+    virtual: virtual_services {
+      id
+      title
+      description
+      license
+      is_verified
+      category_id
+      logo
+
+      category: virtual_service_category {
+        name
+        id
+      }
+
+      rate: virtual_service_rates_aggregate {
+        aggregate {
+          avg {
+            rate
+          }
+        }
+      }
+      contact: virtual_service_addresses {
+        social_media
+      }
+    }
+    total: realtime_services_aggregate {
+      count: aggregate {
+        count
+      }
+    }
+
+    email
+  }
+}

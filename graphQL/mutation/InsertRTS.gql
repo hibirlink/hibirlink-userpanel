@@ -1,0 +1,5 @@
+mutation insert_RTS($object: realtime_service_insert_input!) {
+  insert_realtime_service_one(object: $object) {
+    id
+  }
+}

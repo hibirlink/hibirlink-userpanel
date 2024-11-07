@@ -1,0 +1,6 @@
+mutation ($ids:[bigint!]){
+  update_order_detail(where:{id:{_in:$ids}},_set:{item_status:delliverd})
+  {
+    affected_rows
+  } 
+}

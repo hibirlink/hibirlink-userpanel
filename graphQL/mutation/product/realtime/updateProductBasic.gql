@@ -1,0 +1,15 @@
+mutation($id:bigint!,$amount:Int!,$category:Int!,$subCategory:Int!,$title:String!,$coverImage:String!,$unitPrice:numeric!,$description:jsonb,$status:product_status_enum!){
+  update_physical_product_by_pk(_set:{
+    amount:$amount,
+    category_id:$category,
+    sub_category_id:$subCategory,
+    title:$title,
+    cover_image:$coverImage,
+    unit_price:$unitPrice,
+    description:$description,
+    status:$status
+   
+  },pk_columns:{id:$id}){
+    category_id
+  }
+}

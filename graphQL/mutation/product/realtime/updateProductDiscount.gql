@@ -1,0 +1,11 @@
+mutation($id:Int!,$rate:numeric!,$startDate:date,$endDate:date,$reason:jsonb){
+  update_product_discount_by_pk(_set:{
+     rate:$rate,
+    start_date:$startDate,
+    end_date:$endDate,
+    reason:$reason,
+   
+  },pk_columns:{id:$id}){
+    id
+  }
+}

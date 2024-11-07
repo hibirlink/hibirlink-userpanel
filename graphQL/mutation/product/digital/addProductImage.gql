@@ -1,0 +1,5 @@
+mutation($object:[digital_product_image_insert_input!]!){
+  insert_digital_product_image(objects:$object){
+    affected_rows
+  }
+}

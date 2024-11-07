@@ -1,0 +1,8 @@
+mutation registerSupplier($id: String!, $object: supplier_insert_input!) {
+  supplier: insert_supplier_one(object: $object) {
+    id
+  }
+  update_users(where: { id: { _eq: $id } }, _set: { role: supplier }) {
+    affected_rows
+  }
+}

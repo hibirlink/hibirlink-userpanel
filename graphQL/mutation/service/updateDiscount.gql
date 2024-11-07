@@ -1,0 +1,10 @@
+mutation updateDiscount($id:Int!,$object:service_discount_set_input!){
+  
+  updateDiscount:update_service_discount_by_pk(pk_columns:{id:$id},_set:$object)
+  {
+    id
+    
+  }
+  
+  
+}

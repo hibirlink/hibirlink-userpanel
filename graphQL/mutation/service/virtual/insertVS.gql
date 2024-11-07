@@ -1,0 +1,8 @@
+mutation insert_virtual_service($object:virtual_service_insert_input!){
+  IVS:insert_virtual_service_one(object:$object){
+    id
+    
+  }
+  
+  
+}

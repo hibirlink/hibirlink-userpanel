@@ -1,0 +1,7 @@
+mutation($ids:[Int!]){
+  result:delete_physical_product_image(where:{id:{_in:$ids}}){
+    returning{
+      id
+    }
+  }
+}

@@ -1,0 +1,39 @@
+query fetch_virtual_service($id: Int!) {
+  VS: virtual_service_by_pk(id: $id) {
+    id
+    service_owner
+    title
+    description
+    logo
+    web_link
+    license
+    virtual_service_images {
+      id
+      image_url
+    }
+    virtual_service_addresses {
+      id
+      phone_number
+      social_media
+      description
+    }
+    account {
+      id
+      account_number
+      account_type
+      account_holder
+    }
+
+    service_discount {
+      id
+      start_date
+      end_date
+      rate
+      reason
+    }
+    virtual_service_category {
+      id
+      name
+    }
+  }
+}

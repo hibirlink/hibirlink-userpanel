@@ -1,0 +1,42 @@
+query queryOneRTS($id: bigint!) {
+  QORTS: realtime_service_by_pk(id: $id) {
+    id
+    service_owner
+    title
+    description
+    avaliability
+    logo
+    tinNumber
+    realtime_service_addresses {
+      id
+      description
+      phoneNumber
+      region_city
+      socialMedia
+      subcity
+    }
+
+    realtime_service_category {
+      name
+      id
+    }
+    realtime_service_images {
+      id
+      imageURL
+    }
+    service_discount {
+      id
+      rate
+      end_date
+      start_date
+      reason
+    }
+
+    account {
+      id
+      account_holder
+      account_number
+      account_type
+    }
+  }
+}

@@ -1,0 +1,8 @@
+mutation($id:Int!,$discountId:Int!){
+  delete_product_discount_by_pk(id:$discountId){
+    id
+  }
+  delete_physical_product_by_pk(id:$id){
+    id
+  }
+}

@@ -1,0 +1,7 @@
+query fetchRealTimeServiceCategory{
+  RTSC:realtime_service_category{
+    name,
+    id
+    
+  }
+}

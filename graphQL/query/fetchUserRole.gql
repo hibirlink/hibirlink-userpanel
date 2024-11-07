@@ -1,0 +1,5 @@
+query fetchUserRole($userID: String!) {
+  userRole: users_by_pk(id: $userID) {
+    role
+  }
+}

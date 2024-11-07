@@ -1,0 +1,23 @@
+query ($userId: String!,$status:item_status_enum_comparison_exp!) {
+  user: users_by_pk(id: $userId) {
+    order: product_orders {
+      transaction_key
+      created_at
+      status
+      id
+      detail: order_details(where:{item_status:$status}) {
+        quantity
+        unit_price
+        id
+        product: physical_product {
+          supplier {
+            id
+          }
+          id
+          title
+          cover_image
+        }
+      }
+    }
+  }
+}

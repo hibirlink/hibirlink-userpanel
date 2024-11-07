@@ -1,0 +1,12 @@
+mutation($id:Int!,$title:String,$description:jsonb,$demoLink:String,$coverImage:String,$price:numeric,$category:Int){
+  update_digital_product_by_pk(_set:{
+    title:$title,
+    description:$description,
+    demoLink:$demoLink,
+    cover_image:$coverImage,
+    unit_price:$price,
+    category_id:$category
+  },pk_columns:{id:$id}){
+    id
+  }
+}

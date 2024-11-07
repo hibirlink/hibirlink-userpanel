@@ -1,0 +1,8 @@
+mutation insert_service_discount_custom_function(
+  $object: insert_service_vertual_discount_function_args!
+) {
+  service_discount: insert_service_vertual_discount_function(args: $object) {
+    id
+    reason
+  }
+}

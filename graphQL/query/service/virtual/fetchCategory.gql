@@ -1,0 +1,9 @@
+query virtualServiceCategory{
+  VSC:virtual_service_category{
+    name,
+    id
+    
+  }
+  
+  
+}

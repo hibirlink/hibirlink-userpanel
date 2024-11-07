@@ -1,0 +1,5 @@
+mutation updateAccount($id: Int!, $set: account_set_input!) {
+  UPDATE_ACCOUNT: update_account_by_pk(_set: $set, pk_columns: { id: $id }) {
+    id
+  }
+}

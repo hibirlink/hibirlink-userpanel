@@ -1,0 +1,19 @@
+mutation login(
+  $id: String!
+  $firstName: String!
+  $lastName: String!
+  $email: String!
+  $id_token: String!
+) {
+  login(
+    credentials: {
+      id: $id
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      id_token: $id_token
+    }
+  ) {
+    success
+  }
+}

@@ -1,0 +1,6 @@
+query{
+  category:digital_product_category{
+    id,
+    name
+  }
+}

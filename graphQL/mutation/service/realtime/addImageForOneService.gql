@@ -1,0 +1,10 @@
+mutation insertImageForOneRTS(
+  $objects: [realtime_service_image_insert_input!]!
+) {
+  response: insert_realtime_service_image(objects: $objects) {
+    returning {
+      id
+      imageURL
+    }
+  }
+}

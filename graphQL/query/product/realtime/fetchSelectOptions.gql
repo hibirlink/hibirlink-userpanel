@@ -1,0 +1,13 @@
+query  {
+  product_status {
+    value
+  }
+  physical_product_category {
+    id
+    name
+    physical_product_subcategories {
+      id
+      name
+    }
+  }
+}

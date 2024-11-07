@@ -1,0 +1,12 @@
+mutation updateVSAddress($id:Int!,$set:virtual_service_address_set_input!){
+
+  updateVSAddress:update_virtual_service_address_by_pk(_set:$set,pk_columns:{id:$id})
+  {
+    
+    id
+    
+  }
+  
+  
+  
+}

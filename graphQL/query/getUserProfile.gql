@@ -1,0 +1,21 @@
+query getUserProfile($id: String!) {
+  userProfile: users_by_pk(id: $id) {
+    id
+    firstName
+    lastName
+    email
+
+    supplier {
+      storeName
+      tinNumber
+      phoneNumber
+      accountNumber
+      socialMedia
+      supplier_addresses {
+        regionOrCity
+        subCity
+        description
+      }
+    }
+  }
+}

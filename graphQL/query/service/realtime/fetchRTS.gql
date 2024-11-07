@@ -1,0 +1,36 @@
+query fetchRTS($id: String!, $limit: Int!, $offset: Int!) {
+  USERID: users_by_pk(id: $id) {
+    RTS: realtime_services(limit: $limit, offset: $offset) {
+      id
+      title
+      description
+      licence
+      is_verified
+      category_id
+      logo
+
+      category: realtime_service_category {
+        name
+      }
+
+      rate: realtime_service_rates_aggregate {
+        aggregate {
+          avg {
+            rate
+          }
+        }
+      }
+      contact: realtime_service_addresses {
+        socialMedia
+      }
+    }
+    total: realtime_services_aggregate {
+      count: aggregate {
+        count
+      }
+    }
+
+    total_realtime_service
+    email
+  }
+}

@@ -1,0 +1,16 @@
+mutation deleteVSImages($ids:[Int!]){
+  deletedImage:delete_virtual_service_image(where:{id:{_in:$ids}})
+  {
+    
+    returning{
+      
+      id
+      image_url
+    }
+    
+  }
+  
+  
+  
+  
+}

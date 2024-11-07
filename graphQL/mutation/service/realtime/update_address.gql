@@ -1,0 +1,8 @@
+mutation updateAccount($id:Int!,$set:realtime_service_address_set_input!){
+  
+  update_realtime_service_address_by_pk(_set:$set,pk_columns:{id:$id}){
+    
+   id
+  }
+  
+}

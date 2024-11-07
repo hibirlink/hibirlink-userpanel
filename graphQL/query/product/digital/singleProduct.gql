@@ -1,0 +1,18 @@
+query($id:Int!){
+  product:digital_product_by_pk(id:$id){
+    id,
+    category:digital_product_category{
+      name,
+      id
+    },
+    cover_image,
+    images:digital_product_images{
+       imageUrl,
+       id
+    },
+    unit_price,
+    description,
+    demoLink,
+    title
+  }
+}

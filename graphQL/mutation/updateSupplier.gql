@@ -1,0 +1,17 @@
+mutation updateSupplier(
+  $id: String!
+  $supplier_info: supplier_set_input!
+  $supplier_address_info: supplier_address_set_input!
+) {
+  update_supplier_by_pk(pk_columns: { id: $id }, _set: $supplier_info) {
+    id
+  }
+  update_supplier_address(
+    where: { supplierID: { _eq: $id } }
+    _set: $supplier_address_info
+  ) {
+    returning {
+      id
+    }
+  }
+}

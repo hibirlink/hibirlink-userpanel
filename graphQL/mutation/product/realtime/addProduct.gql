@@ -1,0 +1,5 @@
+mutation insert_product($object:physical_product_insert_input!){
+    insert_physical_product_one(object:$object){
+    supplier_id
+  }
+}

@@ -1,0 +1,23 @@
+query fetchAllDigital_product_by_one_user($id: String!) {
+  supplier: supplier_by_pk(id: $id) {
+    product: digital_products {
+      id
+      rate: digital_product_rates {
+        rate
+      }
+      created_at
+      category: digital_product_category {
+        name
+        id
+      }
+      cover_image
+      images: digital_product_images {
+        imageUrl
+      }
+      unit_price
+      description
+      demoLink
+      title
+    }
+  }
+}

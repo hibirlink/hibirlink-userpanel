@@ -1,0 +1,5 @@
+mutation($product_id:Int,$city:String,$subCity:String,$description:jsonb){
+  update_product_address(_set:{city:$city,sub_city:$subCity,description:$description},where:{product_id:{_eq:$product_id}}){
+    affected_rows
+  }
+}

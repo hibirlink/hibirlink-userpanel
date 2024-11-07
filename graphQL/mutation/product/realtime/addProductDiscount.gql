@@ -1,0 +1,6 @@
+mutation($rate:numeric,$start_date:date,$end_date:date,$reason:jsonb,$product_id:Int){
+  discount_fun(args:{rate:$rate,start_date:$start_date,end_date:$end_date,productid:$product_id,reason:$reason})
+{
+  discount_id
+}  
+}
